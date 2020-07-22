@@ -143,55 +143,70 @@ client.on('message', message => {
 				.addField("🠶 **Scan ⭐️** *scan a victum to get information*", "```「/scan」```", true)
 				.addField("🠶 **install 🔴** *download a beta version of this*", "```「/install」```", true) */
         }
-    }
+	}
+
 		if (message.content.includes ('joke')) {
+			if (message.author.bot) return;
 			var response = helloResponses [Math.floor(Math.random()*helloResponses .length)];
 			setTimeout(() => { message.channel.send( response); }, 2070);
 		}
 
 		if (message.content.includes ('random')) {
+			if (message.author.bot) return;
 			var response = hResponses [Math.floor(Math.random()*hResponses .length)];
 			setTimeout(() => { message.channel.send(response); }, 2070);
 		}
 
 		if (message.content.includes ('dark')) {
+			if (message.author.bot) return;
 			var response = happy [Math.floor(Math.random()*happy .length)];
 			setTimeout(() => { message.channel.send(response); }, 3070);
 		}
 		if (message.content.includes ('anime')) {
+			if (message.author.bot) return;
 			var response = anime [Math.floor(Math.random()*anime .length)];
 			setTimeout(() =>{ message.channel.send("did you know " + response); }, 3070);
 		}
 		if (message.content.includes ('<@689813480970125360>')) {
+			if (message.author.bot) return;
 			var response = helloResponsep [Math.floor(Math.random()*helloResponsep .length)];
 			setTimeout(() =>{ message.channel.send(message.author.toString()+ " " + response); }, 3070);
 		}
 		if (message.content.startsWith ('hi')) {
-			message.channel.send('hey');
+			if (message.author.bot) return;
+			setTimeout(() =>{ message.channel.send('hey');  }, 3070);
 			
 		}
 		if (message.content.startsWith ('welcome')) {
-			message.channel.send('wellcome');
+			 setTimeout(() =>{ message.channel.send('wellcome'); }, 3070);
+			if (message.author.bot) return;
 		}
 		if (message.content.startsWith ('hello')) {
-			message.channel.send('hellllo');
+			if (message.author.bot) return;
+			 setTimeout(() =>{ message.channel.send('hellllo'); }, 1070);
 		}
 		if (message.content.startsWith ('stop')) {
-			message.channel.send('ok ill stoop sorry');
+			if (message.author.bot) return;
+			 setTimeout(() =>{ message.channel.send('ok ill stoop sorry'); }, 1070);
 		}
 		if (message.content.startsWith ('Hi')) {
-			message.channel.send('hey');
+			
+			message.channel.send('hey');  setTimeout(() =>{ if (message.author.bot) return; }, 1070);
 			
 		}
 		if (message.content.startsWith ('Welcome')) {
-			message.channel.send('wellcome');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('wellcome'); }, 2070);
 		}
 		if (message.content.startsWith ('Hello')) {
-			message.channel.send('hellllo');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('hellllo'); }, 1070);
 		}
 		if (message.content.startsWith ('Stop')) {
-			message.channel.send('ok ill stoop sorry');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('ok ill stoop sorry'); }, 1070);
 		}
+		
 		
 		
 });
