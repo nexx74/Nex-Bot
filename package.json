@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "alexa-bot-api": "^0.1.2",
     "chalk": "^2.4.2",
     "cheerio": "^1.0.0-rc.3",
     "common-tags": "^1.8.0",

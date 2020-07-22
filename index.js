@@ -78,6 +78,23 @@ const happy =[
 "I can't change the direction of the wind, but I can adjust my sails to always reach my destination",
 "Perfection is not attainable, but if we chase perfection we can catch excellence.",
 ];
+const cclaim =[
+	"Nice card gg.",
+	"that was a great card.",
+	"amazing card.",
+	"dude what a great card.",
+	"that was a nice card.",
+	"Nice card gg.",
+	"that was a great speed.",
+	"amazing card.",
+	"dude what a great grab.",
+	"that was a nice grab.",
+	"Niceeee gg.",
+	"that was a great gg.",
+	"amazing clutch.",
+	"dude what a great game.",
+	"that was a nice game.",
+	];
 const anime =[
 	"Anime is, in fact, an abbreviated pronunciation of Animation in Japan. It began in 1917 by Japanese artists : Shimokawa Oten, Jun'ichi Kouchi and Seitaro Kitayama.",
 	"Anime is not synonymous with cartoon despite the popular belief held by the Uneducated masses. Anime is considered to be an art form by those who appreciate it. ",
@@ -143,55 +160,119 @@ client.on('message', message => {
 				.addField("🠶 **Scan ⭐️** *scan a victum to get information*", "```「/scan」```", true)
 				.addField("🠶 **install 🔴** *download a beta version of this*", "```「/install」```", true) */
         }
-    }
+	}
+
 		if (message.content.includes ('joke')) {
+			if (message.author.bot) return;
 			var response = helloResponses [Math.floor(Math.random()*helloResponses .length)];
 			setTimeout(() => { message.channel.send( response); }, 2070);
 		}
 
 		if (message.content.includes ('random')) {
+			if (message.author.bot) return;
 			var response = hResponses [Math.floor(Math.random()*hResponses .length)];
 			setTimeout(() => { message.channel.send(response); }, 2070);
 		}
 
 		if (message.content.includes ('dark')) {
+			if (message.author.bot) return;
 			var response = happy [Math.floor(Math.random()*happy .length)];
 			setTimeout(() => { message.channel.send(response); }, 3070);
 		}
 		if (message.content.includes ('anime')) {
+			if (message.author.bot) return;
 			var response = anime [Math.floor(Math.random()*anime .length)];
 			setTimeout(() =>{ message.channel.send("did you know " + response); }, 3070);
 		}
 		if (message.content.includes ('<@689813480970125360>')) {
+			if (message.author.bot) return;
 			var response = helloResponsep [Math.floor(Math.random()*helloResponsep .length)];
-			setTimeout(() =>{ message.channel.send(message.author.toString()+ " " + response); }, 3070);
+			setTimeout(() =>{ message.channel.send( response); }, 3070);
 		}
 		if (message.content.startsWith ('hi')) {
-			message.channel.send('hey');
+			if (message.author.bot) return;
+			setTimeout(() =>{ message.channel.send('hey');  }, 3070);
 			
 		}
 		if (message.content.startsWith ('welcome')) {
-			message.channel.send('wellcome');
+			 setTimeout(() =>{ message.channel.send('wellcome'); }, 3070);
+			if (message.author.bot) return;
 		}
 		if (message.content.startsWith ('hello')) {
-			message.channel.send('hellllo');
+			if (message.author.bot) return;
+			 setTimeout(() =>{ message.channel.send('hellllo'); }, 1070);
 		}
 		if (message.content.startsWith ('stop')) {
-			message.channel.send('ok ill stoop sorry');
+			if (message.author.bot) return;
+			 setTimeout(() =>{ message.channel.send('ok ill stoop sorry'); }, 1070);
 		}
 		if (message.content.startsWith ('Hi')) {
-			message.channel.send('hey');
+			
+			message.channel.send('hey');  setTimeout(() =>{ if (message.author.bot) return; }, 1070);
 			
 		}
 		if (message.content.startsWith ('Welcome')) {
-			message.channel.send('wellcome');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('wellcome'); }, 3070);
 		}
 		if (message.content.startsWith ('Hello')) {
-			message.channel.send('hellllo');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('hellllo'); }, 3070);
 		}
 		if (message.content.startsWith ('Stop')) {
-			message.channel.send('ok ill stoop sorry');
+			if (message.author.bot) return;
+			  setTimeout(() =>{ message.channel.send('ok ill stoop sorry'); }, 3070);
 		}
+		
+		if (message.content.includes('claim')){
+			//checks if the username to fight is in the message
+			let author1 = message.mentions.users.first();
+			let user =  message.author.username;
+			if(!user) return message.reply(" ok ");
+		  
+			//checks if the users is trying to fight themselves
+			if(user.id == message.author.id) return message.reply('ok bot');
+		  
+			//checks if the user is trying to fight the bot
+			if(user.bot ==  true)
+				return;
+		  
+			//saves the two user ids to variables
+			var fighter1 = message.author.id;
+			var fighter2 = user.id;
+		  
+			//announces challenge and awaits response
+			var challenged = user.toString();
+	
+			var response = cclaim [Math.floor(Math.random()*cclaim .length)];
+			setTimeout(() =>{ message.channel.send(response); }, 3070);
+			 message.channel.send('?cla')
+				.then(() => {
+				  message.channel.awaitMessages(response => response.content == 'thanks' && response.author.id == fighter1 || response.content == 'gg' && response.author.id == fighter1, {
+						max: 1,
+						time: 30000,
+						errors: ['time'],
+					})
+					
+					.then((collected) => {
+						if (collected.first().content == 'thanks') {
+
+					   message.channel.send('ur welcome');
+
+							}
+		   
+						else if(collected.first().content == 'gg') {
+							
+					  message.channel.send('gj you were fast')
+	
+						}
+					})
+					.catch(() => {
+						message.channel.send('i wish i was fast enough')
+					
+					});
+				});      
+			}
 		
 		
 });
