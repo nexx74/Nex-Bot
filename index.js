@@ -98,8 +98,4 @@ client.on("message", function(message) {
 
 	});
  
-<<<<<<< HEAD
 client.login("NzM0MTUzMzk4NTc5ODg4MTU5.XxiQLw.FZ7L4cwoOs-NKeWf9PRfspOTERg")
-=======
-client.login("NzM0MTUzMzk4NTc5ODg4MTU5.XxiQLw.FZ7L4cwoOs-NKeWf9PRfspOTERg")
->>>>>>> 6c760722583df6798d7e667743fa68c434c4fa46
