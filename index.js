@@ -17,17 +17,6 @@ if (message.author.bot){
 	console.log ('working')
  return;	
 }  
-
-if (message.author.id === client.user.id){
-	function getRandomInt(max) {
-  return Math.floor(Math.random() * Math.floor(max));
-}
-
-console.log(getRandomInt(6));
-// expected output: 0, 1 or 2
-	console.log ('working')
- return;	
-} 
 	setTimeout(() => { 
 		let content = message.content;;
 	
@@ -36,7 +25,7 @@ console.log(getRandomInt(6));
 		chatbot.getReply(content).then(r => message.channel.send(r))
 		
 		
-		}, (getRandomInt(6));
+		}, 2570);
 			
 	});
  
