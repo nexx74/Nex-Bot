@@ -30,7 +30,7 @@ if (message.author.id === client.user.id){
 		chatbot.getReply(content).then(r => message.channel.send(r))
 		
 		
-		}, 3070);
+		}, 1070);
 			
 	});
  
