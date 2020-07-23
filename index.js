@@ -14,7 +14,7 @@ client.on('message', message => {
 
 
 if (message.author.bot){
-	console.log ('working')
+	console.log ('bot message ignore')
  return;	
 }  
 	setTimeout(() => { 
