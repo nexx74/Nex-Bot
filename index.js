@@ -19,6 +19,12 @@ if (message.author.bot){
 }  
 
 if (message.author.id === client.user.id){
+	function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+console.log(getRandomInt(6));
+// expected output: 0, 1 or 2
 	console.log ('working')
  return;	
 } 
@@ -30,7 +36,7 @@ if (message.author.id === client.user.id){
 		chatbot.getReply(content).then(r => message.channel.send(r))
 		
 		
-		}, 1070);
+		}, (getRandomInt(6));
 			
 	});
  
