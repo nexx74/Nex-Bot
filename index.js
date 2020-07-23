@@ -14,9 +14,14 @@ client.on('message', message => {
 
 
 if (message.author.bot){
-	console.log ('bot message ignore')
+	console.log ('working')
  return;	
 }  
+
+if (message.author.id === client.user.id){
+	console.log ('working')
+ return;	
+} 
 	setTimeout(() => { 
 		let content = message.content;;
 	
@@ -25,7 +30,7 @@ if (message.author.bot){
 		chatbot.getReply(content).then(r => message.channel.send(r))
 		
 		
-		}, 2570);
+		}, 2770);
 			
 	});
  
