@@ -391,7 +391,7 @@ client.on('guildMemberAdd', member => {
               .setImage('https://media0.giphy.com/media/rLNj012Rdd1G8/source.gif')
               .setFooter('*make sure to read the rules in #rules')
           channel.send(xdemby);
-
+    })
 });
 
 client.login(token);
