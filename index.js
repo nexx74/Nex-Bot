@@ -361,7 +361,7 @@ if (message.content.startsWith('m;join')) {
 
               .then((collected) => {
                   if (collected.first().content == 'yes') {
-                      message.channel.send(`*welcome to the server wait a few seconds to get full acess if it dosent work for you @mod or staff member*`);
+                      message.channel.send(`*welcome to the server wait a few seconds to get full acess*`);
                       let mainRole = message.guild.roles.cache.find(role => role.name === "Stars");
                       message.member.roles.add(mainRole.id);
                       console.log("done");
@@ -374,7 +374,13 @@ if (message.content.startsWith('m;join')) {
               });
       });
 }
-
+if (message.content.includes('a')) {
+ setTimeout(() => {
+  const channel = message.guild.channels.cache.find(ch => ch.name === 'chat');
+  channel.send(`hey ${message.author} CONGRATS you get to type the 30 min ;meme try it out` );
+              }, 1800000);
+}
+})
 
 
 client.on('guildMemberAdd', member => {
@@ -391,7 +397,7 @@ client.on('guildMemberAdd', member => {
               .setImage('https://media0.giphy.com/media/rLNj012Rdd1G8/source.gif')
               .setFooter('*make sure to read the rules in #rules')
           channel.send(xdemby);
-    })
+
 });
 
 client.login(token);
