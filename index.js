@@ -374,12 +374,7 @@ if (message.content.startsWith('m;join')) {
               });
       });
 }
-if (message.content.includes('a')) {
- setTimeout(() => {
-  const channel = message.guild.channels.cache.find(ch => ch.name === 'chat');
-  channel.send(`hey ${message.author} CONGRATS you get to type the 30 min ;meme try it out` );
-              }, 1800000);
-}
+
 })
 
 
