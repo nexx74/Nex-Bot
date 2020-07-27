@@ -361,7 +361,7 @@ if (message.content.startsWith('m;join')) {
 
               .then((collected) => {
                   if (collected.first().content == 'yes') {
-                      message.channel.send(`*welcome to the server wait a few seconds to get full acess*`);
+                      message.channel.send(`*welcome to the server wait a few seconds to get full acess if it dosent work for you @mod or staff member*`);
                       let mainRole = message.guild.roles.cache.find(role => role.name === "Stars");
                       message.member.roles.add(mainRole.id);
                       console.log("done");
