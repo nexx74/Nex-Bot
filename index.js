@@ -76,7 +76,7 @@ if (message.content.includes('<@462019251897761792>')) {
     let command = messageArray[0];
     let args = messageArray.slice(1);
     let dMessage = args.join(" ").slice(22);
-    message.author.send(`${message.author} You cannot ping <@462019251897761792> dont do that`)
+    message.author.send(`${message.author} hey there: Please dm @justen do not Ping/Dm Rituazl unless their is a valid reason. If you keep doing this you will be warned`)
 }
 
   if (message.content.startsWith('m;warn')) {
