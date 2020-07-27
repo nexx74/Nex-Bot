@@ -5,8 +5,8 @@ module.exports = class PruneCommand extends Command {
     super(client, {
       name: 'prune',
       aliases: ['delete-messages', 'bulk-delete'],
-      description: 'Delete up to 99 recent messages',
-      group: 'guild',
+     description: 'Delete up to 99 recent messages , **slowdown:** you can use the mod prefix to set 15, 10,5 second cooldown Admin/Mod only',
+       group: 'guild',
       memberName: 'prune',
       guildOnly: true,
       userPermissions: ['MANAGE_CHANNELS', 'MANAGE_MESSAGES'],
