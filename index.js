@@ -56,7 +56,7 @@ client.on('message', message => {
   const Discord = require('discord.js')
   var client = new Discord.Client()
 
-  if (message.content.startsWith('+ dm')) {
+  if (message.content.startsWith('m;dm')) {
     let messageArray = message.content.split(" ");
     let command = messageArray[0];
     let args = messageArray.slice(1);
@@ -376,7 +376,7 @@ message.channel.setRateLimitPerUser(duration)
 message.channel.send("I have set the slowmode in this channel to " + duration + " seconds!")
 }
 
-if (message.content.startsWith('m;join')) {
+if (message.content.startsWith('m;verify')) {
   if (message.author.bot){
     return;
   }
@@ -410,7 +410,7 @@ if (message.content.startsWith('m;join')) {
 client.on('guildMemberAdd', member => {
   const Discord = require('discord.js')
   var client = new Discord.Client()
-  const channel = member.guild.channels.cache.find(ch => ch.name === 'verify'); // change this to the channel name you want to send the greeting to
+  const channel = member.guild.channels.cache.find(ch => ch.name === 'verify-here'); // change this to the channel name you want to send the greeting to
   if (!channel) return;
   channel.send(`Welcome ${member}!`);
   let xdemby = new Discord.MessageEmbed()
