@@ -347,6 +347,35 @@ if (message.content.startsWith('m;unban')) {
           return message.channel.send(embedMsg);
       });
 }
+  if (message.content.startsWith('m;slowdown 10')) {
+  if (!message.member.hasPermission("KICK_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Sorry, you don't have permissions to use this!");
+let duration = ('10')
+message.channel.setRateLimitPerUser(duration)
+
+message.channel.send("I have set the slowmode in this channel to " + duration + " seconds!")
+}
+if (message.content.startsWith('m;slowdown 5')) {
+  if (!message.member.hasPermission("KICK_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Sorry, you don't have permissions to use this!");
+let duration = ('5')
+message.channel.setRateLimitPerUser(duration)
+
+message.channel.send("I have set the slowmode in this channel to " + duration + " seconds!")
+}
+if (message.content.startsWith('m;slowdown 15')) {
+  if (!message.member.hasPermission("KICK_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Sorry, you don't have permissions to use this!");
+let duration = ('15')
+message.channel.setRateLimitPerUser(duration)
+
+message.channel.send("I have set the slowmode in this channel to " + duration + " seconds!")
+}
+if (message.content.startsWith('m;slowdown off')) {
+  if (!message.member.hasPermission("KICK_MEMBERS") && message.author.id !== "291221132256870400") return message.channel.send("Sorry, you don't have permissions to use this!");
+let duration = ('0')
+message.channel.setRateLimitPerUser(duration)
+
+message.channel.send("I have set the slowmode in this channel to " + duration + " seconds!")
+}
+
 if (message.content.startsWith('m;join')) {
   if (message.author.bot){
     return;
