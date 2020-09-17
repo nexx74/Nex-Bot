@@ -1,4 +1,6 @@
-# A Discord Music Bot written in JavaScript, the discord.js library and discord.js-commando framework
+# A Discord Bot written in JavaScript, the discord.js library and discord.js-commando framework
+
+dont make fun of me for putting commands in index i was lazy didn want to add more modules thanks 
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
@@ -106,6 +108,7 @@ If you are not cloning this repo, make sure your dependencies versions are the s
 ### Contributing
 
 Fork it and submit a pull request!
+I Did
 Anyone is welcome to suggest new features and improve code quality!
 
 ### Tasks
@@ -117,5 +120,5 @@ Anyone is welcome to suggest new features and improve code quality!
 [encoder-glitch](https://github.com/encoder-glitch) - uptime command
 
 [chimaerra](https://github.com/chimaerra) - minor command tweaks
-#   P o l a r i s  
- 
+# Polaris
+
