@@ -115,10 +115,5 @@ Anyone is welcome to suggest new features and improve code quality!
 
 * Feature: Saved queues (Being worked on)
 
-## Contributors
 
-[encoder-glitch](https://github.com/encoder-glitch) - uptime command
-
-[chimaerra](https://github.com/chimaerra) - minor command tweaks
-# Polaris
 
